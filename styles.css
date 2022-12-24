@@ -1,0 +1,212 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* Primary */
+	--blue: rgb(79, 125, 243);
+
+	/* Secondary  */
+	--paleblue: hsl(223, 100%, 88%);
+	--lightred: hsl(354, 100%, 66%);
+
+	/* Neutral */
+	--gray: rgb(150, 150, 150);
+	--verydarkblue: hsl(209, 33%, 12%);
+
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Libre Franklin", sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-head {
+	display: flex;
+	flex-direction: column;
+}
+.flex-logo {
+	display: flex;
+	justify-content: center;
+}
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.container {
+	margin: auto;
+	width: min(50%, 80rem);
+	text-align: center;
+}
+
+/* PING. */
+.before-head {
+	margin: 5rem 0 4rem 0;
+	width: 10%;
+	/* height: 2rem; */
+}
+
+/* we are launching soon
+   subscribe the launching soon
+*/
+.heading {
+	color: var(--gray);
+	font-size: 3.6rem;
+	margin-bottom: 15px;
+}
+.head-high {
+	color: black;
+	font-weight: 700;
+}
+
+.after-head {
+	font-size: 1.6rem;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+/* buttons */
+.mails {
+	margin-bottom: 60px;
+}
+
+.mail {
+	border-radius: 100px;
+	padding: 1.4rem 1.8rem;
+	font-size: 1.5rem;
+	width: 70%;
+	border: solid 1.2px var(--gray);
+	box-shadow: 1rem 1rem 1rem rgba (150 150 150, 10);
+	margin-right: 1.6rem;
+
+	transition: all 0.75s;
+}
+
+/* .mail:active, */
+.mail:focus {
+	border: solid 1.2px var(--gray);
+	outline: none;
+}
+
+::placeholder {
+	color: var(--paleblue);
+}
+
+.error {
+	font-size: 1.2rem;
+	font-style: italic;
+	color: var(--lightred);
+	align-self: start;
+	margin-left: 1.4rem;
+}
+.error-mb {
+	font-size: 1.2rem;
+	font-style: italic;
+	color: var(--lightred);
+	align-self: center;
+	/* margin-left: 1.4rem; */
+	display: none;
+}
+
+.hide-error {
+	display: none;
+}
+
+.active-false {
+	border: solid 1px var(--lightred);
+}
+
+.notify {
+	color: white;
+	font-size: 1.6rem;
+	font-weight: 600;
+	background-color: var(--blue);
+	border-radius: 100px;
+	border: none;
+	padding: 1.4rem;
+	width: 30%;
+	box-shadow: 0 0.5rem 0.75rem rgba(79, 125, 243, 0.25);
+
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.notify:hover {
+	opacity: 80%;
+}
+
+/* image */
+.image {
+	width: 90%;
+	margin-bottom: 45px;
+}
+
+/* socials */
+.logos {
+	color: var(--blue);
+	height: 2rem;
+	width: 2rem;
+	border-radius: 100%;
+	border: 0.75px solid var(--paleblue);
+
+	padding: 7px;
+	margin-left: 0.6rem;
+	margin-bottom: 30px;
+	transition: all 0.75s;
+}
+
+.logos:hover {
+	background-color: var(--blue);
+	color: white;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	color: var(--gray);
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 740px) {
+	:root {
+		font-size: 58%;
+	}
+	.image {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	:root {
+		font-size: 62.5%;
+	}
+	.container {
+		width: 90%;
+	}
+	.heading {
+		font-size: 2.6rem;
+	}
+	.flex {
+		flex-direction: column;
+		gap: 2rem;
+	}
+	.mail {
+		width: 100%;
+	}
+	.notify {
+		width: 100%;
+	}
+	.error {
+		display: none;
+	}
+	.error-mb {
+		display: block;
+	}
+}
